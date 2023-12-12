@@ -7,6 +7,7 @@
 
 :root {
     --index: calc(1vw + 1vh);
+    --transition: cubic-bezier(.1, .7, 0, 1);
 }
 
 body {
@@ -22,7 +23,8 @@ body {
 }
 .items {
     display: flex;
-    gap: .4rem;
+    gap: .3rem;
+    perspective: calc(var(--index) * 35);
 }
 
 .item {
@@ -33,4 +35,55 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: transform 1.3s var(--transition);
+    will-change: transform;
+}
+
+.item::before, .item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: calc(var(--index) * -1);
+}
+
+.item::after {
+    left: calc(var(--index) * -1);
+}
+
+.item:hover {
+    transform: translateZ(calc(var(--index) * 10));
+}
+
+/* right elements */
+
+.items .item:hover + * {
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+    z-index: -1;
+}
+.items .item:hover + * + * {
+    transform: translateZ(calc(var(--index) * 5.5)) rotateY(40deg);
+    z-index: -2;
+}
+.items .item:hover + * + * + * {
+    transform: translateZ(calc(var(--index) * 3)) rotateY(30deg);
+    z-index: -3;
+}
+.items .item:hover + * + * + * + * {
+    transform: translateZ(calc(var(--index) * 1)) rotateY(16deg);
+    z-index: -4;
+}
+
+/* left elements */
+.item:has(+ :hover) {
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+}
+.item:has(+ * + :hover) {
+    transform: translateZ(calc(var(--index) * 5.5)) rotateY(-40deg);
+}
+.item:has(+ * + * + :hover) {
+    transform: translateZ(calc(var(--index) * 3)) rotateY(-30deg);
+}
+.item:has(+ * + * + * + :hover) {
+    transform: translateZ(calc(var(--index) * 1)) rotateY(-16deg);
 }
