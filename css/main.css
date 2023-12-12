@@ -5,6 +5,32 @@
     font-family: sans-serif;
 }
 
+:root {
+    --index: calc(1vw + 1vh);
+}
+
 body {
     background: #3c3c3c;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items {
+    display: flex;
+    gap: .4rem;
+}
+
+.item {
+    width: calc(var(--index) * 3);
+    height: calc(var(--index)* 12);
+    background: gray;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
