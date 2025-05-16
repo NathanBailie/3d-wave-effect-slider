@@ -1,15 +1,35 @@
 # 3d Wave Effect Slider
 
-## Description
-I found the idea for this project in one of the tutorials on [WebDesign Master](https://www.youtube.com/watch?v=2_H0Y6BePys) YouTube channel. This is a very beautiful plugin for images with 3d wave effect.
+### 🗨️ Description
 
-### Here you can try this project on the website - [3d Wave Effect Slider](https://nathanbailie.github.io/3d-Wave-Effect-Slider/ "Click to visit")
+A beautiful image slider with a 3D wave effect animation. The project features smooth transitions between images using wave-like distortions and transformations. Built with vanilla JavaScript and CSS for an engaging visual experience.
 
-## Screenshots
-<img src="https://github.com/NathanBailie/3d-Wave-Effect-Slider/raw/main/assets/screenshots/screenshot1.png" width="700" />
-<img src="https://github.com/NathanBailie/3d-Wave-Effect-Slider/raw/main/assets/screenshots/screenshot2.png" width="700" />
+---
 
-## Technologies
-* Html
-* CSS (pseudo-classes, pseudo-elements)
-* JavaScript (working with DOM)
+### 🛠️ Tech Stack
+
+- Html
+- SCSS (pseudo-classes, pseudo-elements)
+- JavaScript (working with DOM)
+- Gulp
+
+---
+
+### 📱 Project website
+
+#### You can watch this project here - [Click!](https://nathanbailie.github.io/3d-wave-effect-slider/ 'Click to visit')
+
+---
+
+### 🚀 Project launch
+
+- `npm install` - install dependencies
+- `npm run dev`- lunch the project in dev mode
+- `npm run build` - performs the final build of the project
+
+---
+
+### 🏞️ Screenshots
+
+<img src="https://github.com/NathanBailie/3d-wave-effect-slider/raw/main/src/assets/screenshots/sc1.png" width="700" />
+<img src="https://github.com/NathanBailie/3d-wave-effect-slider/raw/main/src/assets/screenshots/sc2.png" width="700" />
